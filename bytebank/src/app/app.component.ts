@@ -1,3 +1,4 @@
+import { TransferenciaService } from './../services/transferencia.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,11 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bytebank';
-  transferencias : any[] = [];
   // QUESTION: por que a variavel só funciona com o any?
 
-  transferir($event){
-    const transferencia = {...$event, data: new Date()}
-    this.transferencias.push(transferencia);
-  }
+  constructor(private service: TransferenciaService){}
+
 }
