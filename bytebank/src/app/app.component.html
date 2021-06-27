@@ -1,3 +1,11 @@
-<app-nova-transferencia></app-nova-transferencia>
-
-<app-extrato></app-extrato>
+<header>
+    <div>
+        <a routerLink="extrato" routerLinkActive="ativo">Extrato</a>
+    </div>
+    <div>
+        <a routerLink="nova-transferencia" routerLinkActive="ativo">Nova Transferência</a>
+    </div>
+</header>
+<main>
+    <router-outlet></router-outlet>
+</main>
